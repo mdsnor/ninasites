@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+
+###############################################
+# Geosite local settings
+###############################################
+
+# path for static and uploaded files
+SERVE_PATH = '{{ root_path }}'
+
+# database info
+DATABASES = {
+    'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'geonode',
+         'USER': 'geonode',
+         'PASSWORD': 'geonode',
+     },
+    # vector datastore for uploads
+    'datastore' : {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         #'ENGINE': '', # Empty ENGINE name disables 
+        'NAME': 'geonode_data',
+        'USER' : 'geonode',
+        'PASSWORD' : 'geonode',
+        'HOST' : 'localhost',
+        'PORT' : '5432',
+    }
+}
+
+# email account for sending email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+#REGISTRATION_OPEN=True
+#ACCOUNT_EMAIL_CONFIRMATION_EMAIL=True
+#ACCOUNT_EMAIL_CONFIRMATION_REQUIRED=True
+
+# uncomment for production
+# PROXY_ALLOWED_HOSTS = ('.{{ domain }}')
+
+# localhost by default
+# GEOSERVER_URL = 'http://localhost:8080/'
