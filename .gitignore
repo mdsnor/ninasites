@@ -3,3 +3,8 @@
 .DS_Store
 development.db
 local_settings.py
+ninasites/ninafirst/settings.py
+ninasites/master/settings.py
+ninasites/post_settings.py
+ninasites/pre_settings.py
+
