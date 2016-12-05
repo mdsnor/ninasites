@@ -3,8 +3,17 @@
     "pk": 1, 
     "model": "sites.site", 
     "fields": {
-        "domain": "geonode.{{ domain }}", 
+        "domain": "ninasites.nina.no",
         "name": "Master"
     }
+},
+  {
+    "pk": 2,
+    "model": "sites.site",
+    "fields": {
+        "domain": "ninafirst.nina.no",
+        "name": "Ninafirst"
+    }
 }
+
 ]
