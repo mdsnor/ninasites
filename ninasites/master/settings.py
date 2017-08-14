@@ -30,6 +30,8 @@ SITE_APPS = ()
 # Site specific databases
 SITE_DATABASES = {}
 
+
+
 ##### Overrides
 # Below are some common GeoNode settings that might be overridden for site
 
@@ -42,6 +44,36 @@ SITE_DATABASES = {}
 # Allow users to register
 #REGISTRATION_OPEN = True
 
+TEMPLATES  = [
+	{
+		'BACKEND': 'django.template.backends.django.DjangoTemplates',
+		'DIRS': [
+				'/home/matteo.destefano/geonode/geonode/templates/',
+				os.path.join(PROJECT_ROOT, "templates"),
+				'/home/matteo.destefano/ninasites/ninasites/master/templates',
+			],
+		'APP_DIRS': True,
+		'OPTIONS': {
+			'context_processors': [
+				'django.template.context_processors.debug',
+				'django.template.context_processors.request',
+				'django.contrib.auth.context_processors.auth',
+				'django.contrib.messages.context_processors.messages',
+				'django.core.context_processors.debug',
+				'django.core.context_processors.i18n',
+				'django.core.context_processors.tz',
+				'django.core.context_processors.media',
+				'django.core.context_processors.static',
+				'django.core.context_processors.request',
+				'django.contrib.messages.context_processors.messages',
+				'account.context_processors.account',
+				'geonode.context_processors.resource_urls',
+				'geonode.geoserver.context_processors.geoserver_urls',
+			],
+			'debug': DEBUG,
+		},
+	},
+]
 # Read in GeoSites post_settings
 try:
     # read in project pre_settings
@@ -49,3 +81,5 @@ try:
 except:
     # if not available, read in GeoSites pre_settings
     execfile(os.path.join(GEOSITES_ROOT, 'post_settings.py'))
+
+

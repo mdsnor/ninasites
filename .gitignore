@@ -7,4 +7,7 @@ ninasites/ninafirst/settings.py
 ninasites/master/settings.py
 ninasites/post_settings.py
 ninasites/pre_settings.py
+geoserver/
+downloaded/
 
+dev_config.yml
