@@ -7,6 +7,8 @@ ninasites/ninafirst/settings.py
 ninasites/master/settings.py
 ninasites/post_settings.py
 ninasites/pre_settings.py
+ninasites/static/uploaded/*
+ninasites/static/static/
 geoserver/
 downloaded/
 
